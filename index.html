@@ -1,0 +1,216 @@
+<html>
+<head>
+  <title>Register/login</title>
+  <link href="https://fonts.googleapis.com/css?family=Nunito:400,600,700" rel="stylesheet">
+  <link rel="stylesheet" href="style.css" />
+  <style type="text/css">
+  .button {
+    background-color: #4CAF50; /* Green */
+    border: none;
+    color: white;
+    padding: 16px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    -webkit-transition-duration: 0.4s; /* Safari */
+    transition-duration: 0.4s;
+    cursor: pointer;
+  border-radius: 8px;
+}
+.submit{
+    background-color:red; 
+    color: white; 
+    border: 2px solid red;
+}
+
+.submit:hover {
+    background-color:white;
+    color:red;
+     border: 2px solid red;
+}
+.logout{
+    background-color: #008CBA; 
+    color: white; 
+    border: 2px solid #008CBA;
+}
+
+.logout:hover {
+    background-color:white;
+    color: blue;
+     border: 2px solid #008CBA;
+}
+fieldset.date label { 
+  position: absolute; 
+  top: -20em; 
+  left: -200em; 
+} 
+
+fieldset.date select { 
+margin: 0; 
+padding: 0; 
+font-size: 100%; 
+display: inline; 
+} 
+
+span.inst { 
+  font-size: 75%; 
+  color: blue; 
+  padding-left: .25em; 
+} 
+
+
+fieldset.date select:active, 
+fieldset.date select:focus, 
+fieldset.date select:hover 
+{ 
+  border-color: gray; 
+  background-color: lightyellow; 
+} 
+  </style>
+</head>
+<body>
+  <div id="login_div" class="main-div">
+    <h3>Please SignUp</h3>
+    <input type="email" placeholder="Email..." id="email_field" />
+    <input type="password" placeholder="Password..." id="password_field" />
+
+    <button onclick="login()">Sign Me In</button>
+	<br>
+	<button onclick="signup()">Create My Account</button>
+  </div>
+  <div id="user_div">
+    <h3>&nbsp;&nbsp;Welcome User</h3>
+    <p id="user_para" style="color:green">&nbsp;&nbsp; You're currently logged in.</p>	
+<div>
+<center><h1 style="color:red">Personal Details<h1></center>
+</div>
+<div>
+<div style="display: block;margin-left:100px;margin-right:100px;background-color:lavender;font-size:20px;">
+<form>
+<br>
+&nbsp;&nbsp;Enter your Name: <input type ="text" id="name" size="50" style="height:30px!important;" required><br><br>
+<fieldset class="date"> 
+<legend>Enter your Date Of Birth: </legend> 
+  <label for="month_start">Month</label> 
+  <select id="month_start" 
+          name="month_start"  required /> 
+    <option>January</option>       
+    <option>February</option>       
+    <option>March</option>       
+    <option>April</option>       
+    <option>May</option>       
+    <option>June</option>       
+    <option>July</option>       
+    <option>August</option>       
+    <option>September</option>       
+    <option>October</option>       
+    <option>November</option>       
+    <option>December</option>       
+  </select> - 
+  <label for="day_start">Day</label> 
+  <select id="day_start" 
+          name="day_start" required /> 
+    <option>1</option>       
+    <option>2</option>       
+    <option>3</option>       
+    <option>4</option>       
+    <option>5</option>       
+    <option>6</option>       
+    <option>7</option>       
+    <option>8</option>       
+    <option>9</option>       
+    <option>10</option>       
+    <option>11</option>       
+    <option>12</option>       
+    <option>13</option>       
+    <option>14</option>       
+    <option>15</option>       
+    <option>16</option>       
+    <option>17</option>       
+    <option>18</option>       
+    <option>19</option>       
+    <option>20</option>       
+    <option>21</option>       
+    <option>22</option>       
+    <option>23</option>       
+    <option>24</option>       
+    <option>25</option>       
+    <option>26</option>       
+    <option>27</option>       
+    <option>28</option>       
+    <option>29</option>       
+    <option>30</option>       
+    <option>31</option>       
+  </select> - 
+  <label for="year_start">Year</label> 
+  <select id="year_start" 
+         name="year_start" required /> 
+    <option>2009</option>       
+    <option>2010</option>       
+    <option>2011</option>       
+    <option>2012</option>       
+    <option>2013</option>       
+    <option>2014</option>       
+    <option>2015</option>       
+    <option>2016</option>       
+    <option>2017</option>       
+    <option>2018</option>       
+  </select> 
+  <span class="inst">(Month-Day-Year)</span> 
+</fieldset>
+<h4 style="color:blue">&nbsp;&nbsp;Educational Qualification</h4> 
+&nbsp;&nbsp;&nbsp;&nbsp;Degree:  <select name="degree" id="degree" style="height:30px!important;" required>
+        <option selected>-- Select Degree--</option>
+        <option>B.Com</option>
+        <option>B.sc</option>
+        <option>B.com Computers</option>
+        <option>B.A</option>
+		<option>MCA</option>
+		<option>MBA</option>
+      </select><br>
+      <br>
+&nbsp;&nbsp;&nbsp;&nbsp;Year Of Passing:  <select name="year" id="eng" style="height:30px!important;" required>
+        <option selected>-- Select Year --</option>
+        <option>2009</option>       
+    <option>2010</option>       
+    <option>2011</option>       
+    <option>2012</option>       
+    <option>2013</option>       
+    <option>2014</option>       
+    <option>2015</option>       
+    <option>2016</option>       
+    <option>2017</option>       
+    <option>2018</option>    
+      </select><br><br>
+&nbsp;&nbsp;Last company you worked for: <input type:"text" size="70" style="height:30px!important;" required><br><br>
+&nbsp;&nbsp;Topics of Interest: <input type:"text" size:"50" style="height:30px!important;" required><br><br>
+<center><button type="submit" value="submit"class="button submit" >Submit</button></center>
+<br>
+<br>
+</form>
+</div>
+</div>
+    <button onclick="logout()" class="button logout">Logout</button>
+  </div>
+
+
+
+ 
+<script src="https://www.gstatic.com/firebasejs/5.5.2/firebase.js"></script>
+<script>
+  // Initialize Firebase
+  var config = {
+    apiKey: "AIzaSyDSV778PKsRq42-p_Yns8fpt1-Pq5qYEr0",
+    authDomain: "registration-a7a7e.firebaseapp.com",
+    databaseURL: "https://registration-a7a7e.firebaseio.com",
+    projectId: "registration-a7a7e",
+    storageBucket: "registration-a7a7e.appspot.com",
+    messagingSenderId: "545923320073"
+  };
+  firebase.initializeApp(config);
+</script>
+<script src="index.js"></script>
+</body>
+</html>
